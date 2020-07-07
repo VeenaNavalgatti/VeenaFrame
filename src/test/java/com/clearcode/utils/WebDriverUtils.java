@@ -158,19 +158,6 @@ public class WebDriverUtils {
 			}
 		}
 		
-		public void assertText(By loc, String text) {
-			try
-			{
-			Assert.assertEquals(find(loc).getText(), text);
-			ATUReports.add("Assert Text",text,find(loc).getText(), LogAs.PASSED, new CaptureScreen(
-                    ScreenshotOf.BROWSER_PAGE));
-			}
-			catch(AssertionError e) {
-				ATUReports.add("Assert Text",text,find(loc).getText(), LogAs.FAILED, new CaptureScreen(
-	                    ScreenshotOf.BROWSER_PAGE));
-			}
-		}
-		
 		public void switchWindowByTitle(String title) {
 			Set<String> winids = driver.getWindowHandles();
 			for(String win:winids) {

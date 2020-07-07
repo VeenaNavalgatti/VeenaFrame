@@ -14,14 +14,14 @@ public class TestNGRunner {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		XmlSuite suite = new XmlSuite();
-		suite.setName("Suite");
+		suite.setName("Suite1");
 		 
 		XmlTest test = new XmlTest(suite);
 		test.setName("Test");
 		List<XmlClass> classes = new ArrayList<XmlClass>();
 		XmlClass c = new XmlClass("com.clearcode.testsuite.TestSuite1");
 		List<XmlInclude> methods = new ArrayList<XmlInclude>();
-		methods.add(new XmlInclude("createPatient"));
+		methods.add(new XmlInclude("propertyDetail"));
 		c.setIncludedMethods(methods);
 		classes.add(c);
 		test.setXmlClasses(classes) ;
